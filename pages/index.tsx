@@ -24,7 +24,7 @@ function HomePage() {
 });`
   );
   const [final, setFinal] = React.useState(
-    `function add(a, b) {\n  return a + b;\n}`
+    ``
   );
 
   const [isError, setIsError] = useState(false);
