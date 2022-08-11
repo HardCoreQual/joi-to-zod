@@ -2,7 +2,7 @@ import type {NextPage} from 'next'
 import dynamic from "next/dynamic";
 import "@uiw/react-textarea-code-editor/dist.css";
 import React, {useState} from 'react';
-import {Button} from '@mui/material';
+import {Button, Link} from '@mui/material';
 
 import { transpile } from 'typescript';
 
@@ -34,10 +34,12 @@ function HomePage() {
 
     try {
       (global as any).Joi = Joi;
+      (global as any).joi = Joi;
+      (global as any).JOI = Joi;
+      (global as any).J = Joi;
+      (global as any).j = Joi;
+
       const joiObject = eval(transpile(initial));
-      console.log( joiObject );
-      const jsonSchema = joiToJson(joiObject);
-      console.log( jsonSchema )
       const zodSchema = jsonSchemaToZod(joiToJson(joiObject));
       if (!zodSchema.includes('export')) {
         throw new Error('Something broken in process of conversion, please report any bugs with input data for reproduce it');
@@ -72,7 +74,7 @@ function HomePage() {
 
 
       <div style={{ color: 'red', fontSize: '24px', margin: '10px', textAlign: 'center' }}>
-        {isError ? 'Code is not valid, check browser console': ''}
+        {isError ? 'Code is not valid, check browser console, if it don\'t suggest that is wrong, please open a issue on github and add there your joi schema': ''}
       </div>
 
       <CodeEditor
@@ -88,6 +90,8 @@ function HomePage() {
             "ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace"
         }}
       />
+
+      <Link href="https://github.com/HardCoreQual/joi-to-zod">GitHub Repo</Link>
     </div>
   );
 }
