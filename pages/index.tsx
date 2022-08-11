@@ -95,7 +95,9 @@ function HomePage() {
         }}
       />
 
-      <Link href="https://github.com/HardCoreQual/joi-to-zod">GitHub Repo</Link>
+      <div style={{ display: 'flex', justifyContent: 'flex-end', margin: '10px' }}>
+        <Link href="https://github.com/HardCoreQual/joi-to-zod">GitHub Repo</Link>
+      </div>
     </div>
   );
 }
