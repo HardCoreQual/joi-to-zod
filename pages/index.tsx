@@ -32,6 +32,10 @@ function HomePage() {
   const convert = () => {
     setIsError(false);
 
+    if (!initial.trim()) {
+      setFinal('');
+    }
+
     try {
       (global as any).Joi = Joi;
       (global as any).joi = Joi;
