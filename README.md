@@ -1,1 +1,1 @@
-# Web convertor of `joi` validation schema to `zod` validation schema
+# Web convertor of validation schema from `joi`to `zod`
