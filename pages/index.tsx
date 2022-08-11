@@ -78,7 +78,7 @@ function HomePage() {
 
 
       <div style={{ color: 'red', fontSize: '24px', margin: '10px', textAlign: 'center' }}>
-        {isError ? 'Code is not valid, check browser console, if it don\'t suggest that is wrong, please open a issue on github and add there your joi schema': ''}
+        {isError ? 'Code is not valid, check browser console': ''}
       </div>
 
       <CodeEditor
