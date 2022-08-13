@@ -27,7 +27,7 @@ function HomePage() {
 Joi.object().keys({ 
   name: Joi.string().alphanum().min(3).max(30).required(),
   birthyear: Joi.number().integer().min(1970).max(2013), 
-  job: Joi.string().valid(Job.Developer, Job.DevOps, Job.Designer),
+  job: Joi.string().valid(...Object.values(Job)),
 
   // NOTE: not all features are supported yet, for example: invert
   nickname: joi.string().required().min(3).max(20).description('Nickname')
@@ -64,6 +64,7 @@ Joi.object().keys({
     } catch (e) {
       console.error( e );
       setIsError(true);
+      setFinal('');
     }
   }
 
