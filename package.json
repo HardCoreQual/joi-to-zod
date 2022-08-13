@@ -12,7 +12,7 @@
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "@mui/material": "^5.10.0",
-    "@uiw/react-textarea-code-editor": "v1.4.4",
+    "@uiw/react-textarea-code-editor": "^2.0.3",
     "joi": "^17.6.0",
     "joi-to-json": "github:HardCoreQual/joi-to-json",
     "joi-to-json-schema": "^5.1.0",
