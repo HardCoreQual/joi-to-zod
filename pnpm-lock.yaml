@@ -11,7 +11,7 @@ specifiers:
   eslint: 8.21.0
   eslint-config-next: 12.2.4
   joi: ^17.6.0
-  joi-to-json: github:HardCoreQual/joi-to-json
+  joi-to-json: ^2.5.0
   joi-to-json-schema: ^5.1.0
   json-schema-to-zod: ^0.1.5
   next: 12.2.4
@@ -27,7 +27,7 @@ dependencies:
   '@mui/material': 5.10.0_sqzxty2p7kxc2tmue4tecplwku
   '@uiw/react-textarea-code-editor': 2.0.3_biqbaboplfbrettd7655fr4n2y
   joi: 17.6.0
-  joi-to-json: github.com/HardCoreQual/joi-to-json/5aa5e96f61a3826d79c79d088dde220905909fd3
+  joi-to-json: 2.5.0
   joi-to-json-schema: 5.1.0
   json-schema-to-zod: 0.1.5
   next: 12.2.4_twoewwu6sg7cdf3ao6njtbftne
@@ -2381,6 +2381,13 @@ packages:
     resolution: {integrity: sha512-suSQS0zGdkIgnxKuc9huX+J/+RGtADNmp7Uh6HdCpkguN0Lxhy+7MT7d/BtQW4IBaYv/5AeR4uADN3m6BijQtw==}
     dev: false
 
+  /joi-to-json/2.5.0:
+    resolution: {integrity: sha512-dk8+k/NrBRtS751tVaxtgrjBAVJStC64eSeQ+3iB1Y1Kjzxca4IzIsYpy+FoTZL9vqRfrthwmQ4I+SfqgDe+5A==}
+    dependencies:
+      lodash: 4.17.21
+      semver-compare: 1.0.0
+    dev: false
+
   /joi/17.6.0:
     resolution: {integrity: sha512-OX5dG6DTbcr/kbMFj0KGYxuew69HPcAE3K/sZpEV2nP6e/j/C0HV+HNiBPCASxdx5T7DMoa0s8UeHWMnb6n2zw==}
     dependencies:
@@ -3536,15 +3543,4 @@ packages:
 
   /zod/3.18.0:
     resolution: {integrity: sha512-gwTm8RfUCe8l9rDwN5r2A17DkAa8Ez4Yl4yXqc5VqeGaXaJahzYYXbTwvhroZi0SNBqTwh/bKm2N0mpCzuw4bA==}
-    dev: false
-
-  github.com/HardCoreQual/joi-to-json/5aa5e96f61a3826d79c79d088dde220905909fd3:
-    resolution: {tarball: https://codeload.github.com/HardCoreQual/joi-to-json/tar.gz/5aa5e96f61a3826d79c79d088dde220905909fd3}
-    name: joi-to-json
-    version: 2.4.0
-    requiresBuild: true
-    dependencies:
-      lodash: 4.17.21
-      semver-compare: 1.0.0
-      typescript: 4.7.4
     dev: false

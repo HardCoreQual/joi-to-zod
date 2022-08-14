@@ -6,7 +6,7 @@ import {Button, Link} from '@mui/material';
 
 import { transpile } from 'typescript';
 
-import {parse as joiToJson} from 'joi-to-json';
+import joiToJson from 'joi-to-json';
 
 import Joi from 'joi/lib/index';
 import {jsonSchemaToZod} from 'json-schema-to-zod';
